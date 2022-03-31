@@ -5,16 +5,26 @@ const collection = 'wallet';
 // console.log('models wallet.model.js regexWebSite >>>', regexWebSite);
 
 const schema = new mongoose.Schema({
-	name: {
-		type: String,
+	platform: {
+		type: mongoose.Schema.Types.ObjectId,
+		ref: 'platform',
 		required: true,
-		unique: true,
 	},
-	url: {
-		type: String,
-		required: false,
-		unique: true,
-		validate: regexWebSite,
+	token: {
+		capital: {
+			type: Number,
+			required: true,
+		},
+		token: {
+			type: mongoose.Schema.Types.ObjectId,
+			ref: 'token',
+			required: true,
+		},
+		date: {
+			type: Date,
+			required: true,
+			default: Date.now,
+		},
 	},
 });
 
