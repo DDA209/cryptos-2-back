@@ -1,6 +1,6 @@
 {
 	"name": "back-crypto-wallets",
-	"version": "1.0.0",
+	"version": "0.1.2",
 	"description": "",
 	"main": "index.js",
 	"scripts": {
@@ -21,3 +21,4 @@
 		"pluralize": "^8.0.0"
 	}
 }
+

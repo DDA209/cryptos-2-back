@@ -1,4 +1,5 @@
 require('dotenv').config();
+const configInfo = require('./config/config.json');
 
 const express = require('express');
 const { connectDb, connectBack } = require('./utils/connect');
@@ -12,7 +13,7 @@ app.use(cors());
 app.use(helmet({ referrerPolicy: { policy: 'no-referrer' } }));
 
 /** call routes */
-require('./routes')(app);
+require('./routes')(app, configInfo);
 
 /** connect server and DB */
 console.log('Connect DB');
