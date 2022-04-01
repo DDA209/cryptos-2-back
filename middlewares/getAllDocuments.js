@@ -1,5 +1,5 @@
-const checkDocumentsDatas = require('../core/checkDocumentsDatas');
-const createPopulationTree = require('../core/createPopulationTree');
+const checkDocumentsDatas = require('../utils/checkDocumentsDatas');
+const createPopulationTree = require('../utils/createPopulationTree');
 const util = require('util');
 
 /**

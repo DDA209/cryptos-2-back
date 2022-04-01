@@ -1,5 +1,5 @@
 const checkDocumentsDatas = require('../utils/checkDocumentsDatas');
-const dbLog = require('../core/dbLog');
+const dbLog = require('./core/dbLog');
 
 /**
  * Changes isDeleted value to true

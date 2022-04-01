@@ -1,6 +1,6 @@
-const checkDocumentsDatas = require('../core/checkDocumentsDatas');
-const checkDependances = require('../core/checkDependances');
-const dbLog = require('../core/dbLog');
+const checkDocumentsDatas = require('../utils/checkDocumentsDatas');
+const checkDependances = require('../utils/checkDependances');
+const dbLog = require('./core/dbLog');
 
 /**
  * Create a new document in database

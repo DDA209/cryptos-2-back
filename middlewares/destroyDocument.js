@@ -1,6 +1,6 @@
 const checkDocumentsDatas = require('../utils/checkDocumentsDatas');
 const dbLog = require('./core/dbLog');
-const configInfo = require('../../../config/config.json');
+const configInfo = require('../config/config.json');
 
 /**
  * Delete a document from the database
@@ -97,7 +97,7 @@ const destroyDocument = (Model, here, req, res) => {
 				}
 				/* end errors check */
 
-				const success = true;
+				let success = true;
 
 				console.log(
 					`----------------------- ${_id} in ${here} destroyed`

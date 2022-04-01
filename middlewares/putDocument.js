@@ -1,6 +1,6 @@
-const checkDocumentsDatas = require('../core/checkDocumentsDatas');
-const checkDependances = require('../core/checkDependances');
-const dbLog = require('../core/dbLog');
+const checkDocumentsDatas = require('../utils/checkDocumentsDatas');
+const checkDependances = require('../utils/checkDependances');
+const dbLog = require('./core/dbLog');
 
 /**
  * Update an existing document in database
@@ -8,7 +8,7 @@ const dbLog = require('../core/dbLog');
  * @param { string } here				only used for console.log
  * @param { object } req				origine request
  * @param { object } res				response to send
- * @param { object } populationModels	mongoose.models for dependences check
+ * @param { object } populationModels	Note used (mongoose.models for dependences check)
  */
 const putDocument = (Model, here, req, res, populationModels) => {
 	console.log(`#putDocument ${here}/id/:id`);

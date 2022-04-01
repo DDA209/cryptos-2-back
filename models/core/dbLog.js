@@ -2,8 +2,6 @@ const mongoose = require('mongoose');
 
 const collection = 'dbLog';
 
-console.log(`--- model ${collection}			config: ok - tests: no`);
-
 const dbLoggerSchema = new mongoose.Schema({
 	collectionName: String,
 	documentId: String,

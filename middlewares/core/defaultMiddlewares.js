@@ -1,13 +1,13 @@
 const plurialize = require('pluralize');
 const util = require('util');
 
-const postDocument = require('../common/postDocument');
-const getAllDocuments = require('../common/getAllDocuments');
-const getDocumentById = require('../common/getDocumentById');
-const getDocumentsByQuery = require('../common/getDocumentsByQuery');
-const putDocument = require('../common/putDocument');
-const deleteDocument = require('../common/deleteDocument');
-const destroyDocument = require('../common/destroyDocument');
+const postDocument = require('../postDocument');
+const getAllDocuments = require('../getAllDocuments');
+const getDocumentById = require('../getDocumentById');
+const getDocumentsByQuery = require('../getDocumentsByQuery');
+const putDocument = require('../putDocument');
+const deleteDocument = require('../deleteDocument');
+const destroyDocument = require('../destroyDocument');
 /**
  * Controllers for default routes
  * @param {function} router
