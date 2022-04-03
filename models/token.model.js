@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
-const collection = 'token';
 const commonFields = require('./common/commonFields');
+
+const collection = 'token';
+console.log(`MODEL of ${collection}`);
 
 const schema = new mongoose.Schema({
 	...commonFields,

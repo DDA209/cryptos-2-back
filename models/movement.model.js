@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const commonFields = require('./common/commonFields');
 
 const collection = 'movement';
+console.log(`MODEL of ${collection}`);
 
 const schema = new mongoose.Schema({
 	...commonFields,
@@ -43,9 +44,11 @@ const schema = new mongoose.Schema({
 			'cashback',
 			'burning',
 			'dividend',
+			'trade',
 		],
 	},
 	polarity: {
+		// credit + or debit -
 		type: String,
 		required: true,
 		enum: ['+', '-'],

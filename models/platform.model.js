@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 const { webSite: regexWebSite } = require('../utils/regex');
-const collection = 'platform';
 const commonFields = require('./common/commonFields');
 
-// console.log('models wallet.model.js regexWebSite >>>', regexWebSite);
+const collection = 'platform';
+console.log(`MODEL of ${collection}`);
 
 const schema = new mongoose.Schema({
 	...commonFields,
