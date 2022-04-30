@@ -3,8 +3,9 @@ const dbPort = process.env.DB_URI;
 const backPort = process.env.BACK_PORT;
 require('dotenv').config();
 // console.log('utils/connect.js process.env >>>', process.env);
+
 /**
- * Database connection
+ * Backend connection
  */
 const connectDb = async () => {
 	try {
@@ -17,7 +18,7 @@ const connectDb = async () => {
 };
 
 /**
- * Backend connection
+ * Database connection
  */
 const connectBack = async (app) => {
 	try {

@@ -11,7 +11,7 @@ const util = require('util');
  * @param { undefined } limit		not used
  */
 const getAllDocuments = (Model, here, res, skip, limit) => {
-	console.log(`#getAllDocuments /${here}`);
+	// console.log(`#getAllDocuments /${here}`);
 	skip = 0;
 	limit = false;
 	const arrPopulation = createPopulationTree(Model);
@@ -25,13 +25,13 @@ const getAllDocuments = (Model, here, res, skip, limit) => {
 				const success = false;
 				const data = theError.toString();
 				const response = { success, data };
-				console.log('#getAllDocuments error', response);
+				// console.log('#getAllDocuments error', response);
 				return res.json(response);
 			} else if (documents.length < 1) {
 				const success = false;
 				const data = 'no document found';
 				const response = { success, data };
-				console.log('#getAllDocuments no document', response);
+				// console.log('#getAllDocuments no document', response);
 				return res.json(response);
 				/* end errors check */
 			} else {
@@ -39,13 +39,13 @@ const getAllDocuments = (Model, here, res, skip, limit) => {
 					return !documents.isDeleted;
 				});
 
-				console.log(
-					`${here}'s document${
-						documents.length > 1 ? 's' : ''
-					}: available = ${data.length}, deleted = ${
-						documents.length - data.length
-					}, total = ${documents.length}`
-				);
+				// console.log(
+				// 	`${here}'s document${
+				// 		documents.length > 1 ? 's' : ''
+				// 	}: available = ${data.length}, deleted = ${
+				// 		documents.length - data.length
+				// 	}, total = ${documents.length}`
+				// );
 
 				const success = true;
 				const response = { success, data };

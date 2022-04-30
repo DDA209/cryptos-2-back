@@ -9,7 +9,7 @@
 const checkDocumentsDatas = (err, document, here, _id, isDeletedIgnore) => {
 	_id ? (id = _id) : (id = 'none');
 
-	console.log('controllers/core #checkDocumentsDatas');
+	// console.log('utils/checkDocumentsDatas #checkDocumentsDatas');
 	if (!document && !err) {
 		return `The document with ObjectId "${id}" at path "_id" for model "${here}" doesn't exists`;
 	} else if (err) {

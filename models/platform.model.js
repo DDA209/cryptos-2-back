@@ -18,6 +18,7 @@ const schema = new mongoose.Schema({
 		unique: true,
 		// validate: regexWebSite,
 	},
+	name : String
 });
 
 module.exports = mongoose.model(collection, schema);
